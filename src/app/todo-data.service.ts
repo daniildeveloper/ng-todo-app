@@ -31,7 +31,8 @@ export class TodoDataService {
   /**
    * simulate delete todos/:id
    */
-  deleteTodoById(id: Number): TodoDataService {
+  deleteTodoById(id: number): TodoDataService {
+    console.log(this.getTodoById(id).title);
     this.todos = this.todos.filter(todo => todo.id !== id);
     return this;
   }
@@ -39,7 +40,7 @@ export class TodoDataService {
   /**
    * simulate PUT /todos/:id
    */
-  updateTodoById(id: Number, values: Object = {}): Todo {
+  updateTodoById(id: number, values: Object = {}): Todo {
     let todo = this.getTodoById(id);
 
     if (!todo) {
@@ -60,7 +61,7 @@ export class TodoDataService {
   /**
    * simulate get todos/:id/
    */
-  getTodoById(id: Number): Todo {
+  getTodoById(id: number): Todo {
     return this.todos.filter(todo => todo.id === id).pop();
   }
 

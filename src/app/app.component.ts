@@ -31,6 +31,7 @@ export class AppComponent {
   }
 
   removeTodo(todo) {
+    // console.log('Removed' + todo.id);
     this.todoDataService.deleteTodoById(todo.id);
   }
 
