@@ -8,12 +8,12 @@
 
   <section class="main" *ngIf="todos.length > 0">
     <ul class="todo-list">
-      <li *ngFor="let todo of todos" [class.completed]="todo.complete">
+      <li *ngFor="let todo of todos">
         <div class="view complete-{{todo.complete}}" >
           <input type="checkbox" class="toggle" (click)="toggleTodoComplete(todo)" [checked]="todo.complete">
           <label for="">{{todo.title}}</label>
           <!--(event)="statement" execute the statement when event occured-->
-          <button class="destroy" (click)="removeTodo(todo)">X</button>
+          <button class="destroy" (click)="removeTodo(todo); getTodos()">X</button>
         </div>
       </li>
     </ul>
