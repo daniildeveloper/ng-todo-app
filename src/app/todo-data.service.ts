@@ -10,7 +10,7 @@ export class TodoDataService {
    */
   lastId: number = 0;
 
-  /**
+  /** 
    * placeholder for todos
    */
   todos: Todo[] = [];
@@ -67,7 +67,7 @@ export class TodoDataService {
   /**
    * make todo complete or not
    */
-  toggleTodoComplete(todo: Todo) {
+  toggleTodoComplete(todo: Todo): Todo {
     let updatedTodo = this.updateTodoById(todo.id, { complete: !todo.complete });
     return updatedTodo;
   }

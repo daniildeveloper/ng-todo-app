@@ -1,0 +1,35 @@
+.todoapp{
+    border-radius: 5px;
+    max-width: 300px;
+    margin: 25px 33px;
+    background: lightgray;
+    color: black;
+    font-family: Consolas;
+    padding: 25px;
+}
+
+h1{
+    text-align: center;
+    font-size: 36px;
+}
+
+.todo{
+    min-height: 30px;
+    min-width: 280px;
+    text-align: center;
+}
+
+.todo-list{
+    list-style-type: decimal;
+    font-size: 18px;
+}
+
+.destroy{
+    font-size: 20px;
+    color: white;
+    background: red;
+    border: none;
+}
+.complete-true{
+    text-decoration: line-through;
+}
